@@ -1,0 +1,78 @@
+1️⃣ Python Character Set 🔤
+Python character set includes:
+• Letters (A–Z, a–z)
+• Digits (0–9)
+• Special symbols (+ - * / % = etc.)
+• Whitespaces (space, tab, newline)
+Python uses Unicode, so it supports multiple languages 🌍
+
+2️⃣ Variables and How to Use Them 📦
+Variables are used to store data in memory.
+No need to declare data type; value decides the type.
+Example:
+x = 10
+name = "Atharva"
+
+3️⃣ Rules for Identifiers 📛
+Identifiers are names of variables, functions, or classes.
+Rules:
+• Must start with a letter or underscore (_)
+• Cannot start with a number ❌
+• No spaces allowed
+• Cannot use Python keywords
+
+4️⃣ Data Types 🧮
+Data types define the type of data stored.
+Common data types:
+• int → 10
+• float → 3.14
+• str → "Python"
+• bool → True / False
+• list, tuple, set, dictionary
+
+5️⃣ Keywords 🔐
+Keywords are reserved words with special meaning in Python.
+Examples:
+if, else, for, while, break, continue, True, False, None
+Keywords cannot be used as variable names ❌
+
+6️⃣ Print Sum 🖨️
+print() is used to display output on the screen.
+Example:
+a = 10
+b = 20
+print(a + b)
+
+7️⃣ Comments in Python 💬
+Comments are used to explain code and are ignored by Python.
+Single-line comment:
+# This is a comment
+Multi-line comment:
+"""
+This is a multi-line comment
+"""
+
+8️⃣ Operators in Python ➗
+Operators are used to perform operations.
+Types:
+• Arithmetic ➕ ➖ ✖️ ➗ %
+• Relational 🔍 (== != > < >= <=)
+• Logical 🤔 (and, or, not)
+• Assignment 📌 (= += -=)
+
+9️⃣ Type Conversion 🔄
+Type conversion means changing one data type into another.
+Example:
+x = int("10")
+y = float(5)
+z = str(100)
+Types:
+• Implicit (automatic)
+• Explicit (manual)
+
+🔟 Inputs in Python ⌨️
+input() is used to take input from the user.
+Example:
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+Note ⚠️: input() always returns a string.
