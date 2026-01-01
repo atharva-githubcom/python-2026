@@ -1,0 +1,110 @@
+🐍 Python Basics – Theory Notes
+
+1️⃣ Conditional Statements (Decision Making)
+Conditional statements are used to execute code based on certain conditions.
+
+if Statement: Executes code only if the condition is True.
+Example:
+
+age = 18
+if age >= 18:
+    print("You can vote")
+
+
+if–else Statement: Chooses between two options.
+
+age = 16
+if age >= 18:
+    print("You can vote")
+else:
+    print("You cannot vote")
+
+
+if–elif–else Statement: Used for multiple conditions.
+
+marks = 75
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+
+
+Nested if: if inside another if, used when one condition depends on another.
+
+age = 20
+ll = "yes"
+if age >= 18:
+    if ll == "yes":
+        print("Apply for DL")
+
+
+💡 Tip: Use >= instead of > if you want to handle equal values too.
+
+2️⃣ Strings 📝
+Strings are sequences of characters enclosed in quotes ' ' or " ".
+
+name = "Atharva"
+
+
+Common String Operations:
+
+len(name) → length of string
+
+"Hello " + name → concatenation
+
+name * 2 → repetition
+
+name[0] → first character
+
+name[0:3] → slicing
+
+name.lower() → lowercase
+
+name.upper() → uppercase
+
+name.count("a") → count occurrences
+
+💡 Strings are immutable – cannot change a character directly.
+
+3️⃣ Functions 🔧
+Functions are blocks of code that perform a specific task.
+
+def add(a, b):
+    return a + b
+
+print(add(5, 3))
+
+
+Tip:
+
+def → defines a function
+
+return → sends output
+
+Functions can take parameters (inputs)
+
+4️⃣ Operators ⚡
+
+Arithmetic Operators:
++ addition, - subtraction, * multiply, / divide, // floor divide, % modulus, ** power
+
+Comparison Operators:
+== equal, != not equal, > greater, < less, >= greater or equal, <= less or equal
+
+Logical Operators:
+and True if both conditions True, or True if any condition True, not inverts Boolean
+
+Assignment Operators:
+= assign, += add and assign, -= subtract and assign, *= multiply and assign, /= divide and assign
+
+🎯 Quick Tips:
+
+Always indent after if, elif, else, def
+
+Use .lower() or .upper() to normalize string inputs
+
+Use % operator to check even, odd, or multiples
+
+Nested if is useful when one condition depends on another
