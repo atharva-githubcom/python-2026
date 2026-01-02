@@ -1,0 +1,234 @@
+Python Lists, Tuples, and User Input – Theory Report
+1️⃣ List in Python
+
+Definition:
+A list is a collection of items enclosed in square brackets [ ].
+
+Lists are ordered → elements have positions
+
+Lists are mutable → you can change, add, or remove elements
+
+Lists can contain any data type → integers, strings, floats, other lists
+
+Example:
+
+my_list = [10, 20, 30]
+my_list[0] = 15  # Change element
+my_list.append(40)  # Add element
+
+
+Key Features:
+
+Mutable ✅
+
+Ordered ✅
+
+Allows duplicates ✅
+
+Common List Methods:
+
+Method	Use
+append()	Add element at end
+extend()	Add multiple elements
+insert()	Add at specific index
+remove()	Remove first matching element
+pop()	Remove by index
+sort()	Sort list
+reverse()	Reverse list
+count()	Count occurrences
+index()	Find position of value
+
+Slicing on List:
+
+nums = [10, 20, 30, 40, 50]
+print(nums[1:4])    # [20, 30, 40]
+print(nums[::-1])   # [50, 40, 30, 20, 10] → reverse
+
+
+When to use a List:
+
+When you need changeable collection of items
+
+When you need to add or remove elements dynamically
+
+2️⃣ Tuple in Python
+
+Definition:
+A tuple is a collection of items enclosed in parentheses ( ).
+
+Tuples are ordered
+
+Tuples are immutable → cannot change after creation
+
+Can contain any data type
+
+Example:
+
+my_tuple = (10, 20, 30)
+# my_tuple[0] = 15  → ❌ Error
+
+
+Key Features:
+
+Immutable ❌
+
+Ordered ✅
+
+Allows duplicates ✅
+
+Faster than list ⚡
+
+Tuple Methods (Only 2):
+
+Method	Use
+count()	Count occurrences
+index()	Find index of element
+
+Slicing on Tuple:
+
+t = (10, 20, 30, 40)
+print(t[1:3])    # (20, 30)
+print(t[::-1])   # (40, 30, 20, 10)
+
+
+When to use a Tuple:
+
+When data should not change
+
+When you want faster access and safe storage
+
+3️⃣ User Input in Python
+
+Python provides the input() function to take input from the user.
+
+3.1 Single Value Input
+name = input("Enter your name: ")
+
+
+Takes input as a string
+
+3.2 Multiple Values in a List
+
+Split input into multiple elements → .split()
+
+Convert type → map()
+
+Optional immutable tuple → tuple()
+
+Example 1: Strings
+
+names = input("Enter names separated by space: ").split()
+# Input: Atharva Rahul Amit
+# names = ['Atharva', 'Rahul', 'Amit']
+
+
+Example 2: Numbers
+
+marks = list(map(int, input("Enter marks separated by space: ").split()))
+# Input: 70 80 50
+# marks = [70, 80, 50]
+
+
+Example 3: Tuple
+
+marks_tuple = tuple(map(int, input("Enter marks: ").split()))
+# marks_tuple = (70, 80, 50)
+
+
+When to use these:
+
+Operation	Use Case
+split()	To separate multiple inputs from a single line
+map()	To convert strings to int, float, etc.
+tuple()	To store immutable collection
+list()	To store mutable collection
+4️⃣ Sorting Lists
+
+Ascending order: .sort()
+
+Descending order: .sort(reverse=True)
+
+Works for numbers or letters
+
+Example:
+
+nums = list(map(int, input("Enter numbers: ").split()))
+nums.sort()           # Ascending
+print(nums)
+nums.sort(reverse=True)  # Descending
+print(nums)
+
+
+Sorting Letters:
+
+letters = input("Enter letters: ").split()
+letters.sort()
+print(letters)  # Alphabetically A-Z
+letters.sort(reverse=True)
+print(letters)  # Z-A
+
+
+Tip:
+
+Numbers as strings → sorted lexicographically ('10' < '2')
+
+Numbers as int → sorted numerically
+
+5️⃣ Checking Palindrome Using List
+
+Palindrome → Reads the same forward & backward
+
+Use list slicing [::-1] to reverse
+
+Example (works for letters and numbers):
+
+user_input = input("Enter a word or number: ")
+lst = list(user_input)
+if lst == lst[::-1]:
+    print("Palindrome")
+else:
+    print("NOT Palindrome")
+
+
+Example Runs:
+
+madam → Palindrome ✅
+
+121 → Palindrome ✅
+
+a1b1a → Palindrome ✅
+
+6️⃣ Count Occurrences in Tuple or List
+
+Tuple example:
+
+marks = (70, 80, 50, 70)
+print(marks.count(70))  # 2
+
+
+User Input Example:
+
+numbers = tuple(map(int, input("Enter student marks: ").split()))
+mark = int(input("Enter mark to count: "))
+print("Number of students with", mark, "marks:", numbers.count(mark))
+
+7️⃣ Summary Table: List vs Tuple
+Feature	List	Tuple
+Mutable	✅ Can change	❌ Cannot change
+Syntax	[ ]	( )
+Methods	Many	Only 2 (count, index)
+Use Case	Dynamic data	Fixed/constant data
+Performance	Slower	Faster
+8️⃣ Key Points for Input & Operations
+
+Always use .split() for multiple inputs
+
+Use map() to convert string → int/float
+
+Use tuple() if data should not be modified
+
+Use list() if data will change
+
+Use .sort() for ascending and descending
+
+Use slicing [::-1] to reverse or check palindrome
