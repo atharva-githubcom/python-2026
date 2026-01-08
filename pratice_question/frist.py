@@ -140,3 +140,15 @@ for i in range(1,31):
         print(i)
 
 
+#write the code to find the factorial:
+def factorial(n):
+    fact = 1                 # Initialize factorial
+    for i in range(1, n+1):  # Loop from 1 to n (inclusive)
+        fact = fact * i      # Multiply step by step
+    return fact              # Return final factorial
+
+n = int(input("enter the number which factorial you want to calculate: "))
+fac = factorial(n)          # Call function and store result
+print("The factorial of number is:", fac)  # Print final result        
+
+
