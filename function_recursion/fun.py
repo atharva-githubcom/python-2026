@@ -86,3 +86,83 @@ rate=int(input("enter the rate"))
 ouput=convert_to_inr(dollar,rate)
 print("The value is ",ouput)
 
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this oTask:
+
+#Write a function that:
+#1️⃣ Takes one number n
+#2️⃣ Calculates the square of the number
+#3️⃣ Returns the result
+#4️⃣ Print the result outside the function
+def square(a):
+    squ=a**2
+    return squ
+a=int(input("Enter the number for which you want find the square:"))
+an=square(a)
+print(f"The square of {a} is",an)
+
+#Task:
+
+#Write a function that:
+#1️⃣ Takes one number n
+#2️⃣ Calculates the factorial of n
+#3️⃣ Returns the factorial
+#4️⃣ Print the result outside the functio
+
+
+def fac(n):
+    fact=1
+    for i in range(1,n+1):
+        fact=fact*i
+    return fact
+n=int(input("enter the number for which you want to calculate the factorial:"))
+fact=fac(n)
+print(f"The factorial of number {n} is:",fact)
+
+
+#Task:
+#Write a function that:
+#1️⃣ Takes three numbers
+#2️⃣ Returns the largest number
+#3️⃣ Print the result outside the function
+
+
+def large(a,b,c):
+    if(a>b and a>c):
+        return a
+    elif(b>a and b>c):
+        return b
+    else:
+        return c
+a=int(input("Enter the frist number:"))
+b=int(input("Enter the second number:"))  
+c=int(input("Enter the Third number:"))  
+lar=large(a,b,c)
+print("The larger number is:",lar)
+
+#Write a function that:
+#1️⃣ Takes one number n
+#2️⃣ Prints all numbers from 1 to n
+#3️⃣ No return needed (just print inside function)
+
+def pri(n):
+    for i in range(1,n+1):
+        print("the numbers are:",i)
+n=int(input("enter the numbers:"))
+pri(n)
+
+#Task:
+#Write a function that:
+#1️⃣ Takes one number n
+#2️⃣ Prints all even numbers from 1 to n
+#3️⃣ No return needed
+
+
+def even(n):
+    for i in range(1,n+1):
+        if(i%2==0):
+            print("The number which divisble by 2 are:",i)
+n=int(input("enter the numbers:"))
+tot=even(n)
+    
