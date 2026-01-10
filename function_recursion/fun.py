@@ -166,3 +166,13 @@ def even(n):
 n=int(input("enter the numbers:"))
 tot=even(n)
     
+#find the palindrome using function 
+
+def plan(n):
+    if(n==n[::-1]):
+        return "Palindrome"
+    else:
+        return "No Palindrome"
+n=list(input("enter the number or char:"))
+ou=plan(n)
+print(ou)    
