@@ -178,3 +178,87 @@ c.bike()    # from Child
 #Diferrence between muliple and multilevel 
 ##In multilevel inheritance, properties are passed level by level from grandparent to parent and then to child.
 ##In multiple inheritance, a child class inherits from two parent classes and can access properties of both.
+
+#Class method 
+
+class Student:
+    college = "XYZ College"   # class variable
+
+    def __init__(self, name, age):### This method  data is different for all for all student
+        self.name = name      # instance variable
+        self.age = age
+
+    @classmethod ### This method  data is ame for all student
+    def show_college(cls):
+        print("College:", cls.college)
+
+
+# Create object
+s1 = Student("Atharva", 21)
+
+# Instance variables
+print("Name:", s1.name)
+print("Age:", s1.age)
+
+# Class method
+Student.show_college()
+
+#methods code including 3 methods together 
+class Calculator:
+
+    factor = 10   # class variable
+
+    # Instance method
+    def add(self, a, b):
+        return a + b
+
+    # Static method
+    @staticmethod
+    def subtract(a, b):
+        return a - b
+
+    # Class method
+    @classmethod
+    def multiply(cls, a):
+        return a * cls.factor
+
+
+# Create object
+c = Calculator()
+
+# Instance method (uses object)
+print("Addition:", c.add(10, 5))        # 15
+
+# Static method (no object/class data)
+print("Subtraction:", Calculator.subtract(10, 5))  # 5
+
+# Class method (uses class data)
+print("Multiplication:", Calculator.multiply(5))   # 50
+
+#class method can also called by using the object.
+print("multiplication:",c.multiply(10)) 
+
+#Polymorphism
+class Dog:
+    def sound(self):
+        print("Dog barks")
+
+class Cat:
+    def sound(self):
+        print("Cat meows")
+
+Dog().sound()
+Cat().sound()
+
+#code using absraction and encapsulation 
+class Palindrome:
+    def __init__(self,ina):
+        self.ina=ina
+        
+    def check(self):
+        if(self.ina==self.ina[::-1]):
+            return "palindrome"
+        else:
+            return "NO"
+c=Palindrome(ina=input("enter the word:"))
+print(c.check())
